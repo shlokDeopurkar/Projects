@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit Feedback</title>
+</head>
+<body>
+    <h1>Submit Feedback</h1>
+    <form th:action="@{/submitFeedback}" th:object="${feedback}" method="post">
+        <label for="comment">Your Feedback:</label>
+        <textarea id="comment" th:field="*{comment}" rows="4" cols="50" required></textarea><br><br>
+        
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+    <p><a href="/viewFeedback">View Feedback</a></p>
+</body>
+</html>

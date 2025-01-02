@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View Feedback</title>
+</head>
+<body>
+    <h1>All Submitted Feedback</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Feedback</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="feedback : ${feedbacks}">
+                <td th:text="${feedback.id}"></td>
+                <td th:text="${feedback.comment}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><a href="/feedback">Back to Feedback Form</a></p>
+</body>
+</html>
